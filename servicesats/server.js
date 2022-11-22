@@ -77,7 +77,7 @@ app.post('/edit', async (req, res) => {
     }
 });
 // api for delete 
-app.delete('/customer/:user_id', async (req, res) => {
+app.get('/customer/:user_id', async (req, res) => {
     try {
         const { user_id } = req.params;
         await User.deleteOne({ user_id: user_id });
